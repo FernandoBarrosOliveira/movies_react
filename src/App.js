@@ -1,24 +1,20 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './css/fjp_style.css';
-import './App.css';
+import Cabecalho from './Cabecalho';
+import Menus from './Menus';
+import MovieList from './MovieList';
+import Rodape from './Rodape';
 
 class App extends Component {
   render() {
     return (
-      <header>    
-            <button className="menu-abrir"></button>
-            <nav className="navegacao col-gra-00"> 
-                <button className="menu-fechar"></button>
-                <ul className = "menu-principal">
-                    <li className="col-gra-00"><a className="col-gra-00" href="/">Home</a></li>
-                    <li className="col-gra-00"><a className="col-gra-00" href="#">Top 20</a></li>
-                    <li className="col-gra-00"><a className="col-gra-00" href="#">Menu 3</a></li>
-                    <li className="col-gra-00"><a className="col-gra-00" href="#">Menu 4</a></li>
-                </ul>
-            </nav>
-            <script src="menu.js"></script>            
-        </header>
+        <div>        
+            <Cabecalho/> 
+            <Menus/>
+            <MovieList/>
+            <Rodape/>
+        </div>
     );
   }
 }

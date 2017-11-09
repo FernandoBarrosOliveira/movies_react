@@ -391,6 +391,7 @@ body{
 
 img, iframe{
     height: auto;
+    margin: 5px auto;
     max-width: 100%;
 }
 
@@ -483,6 +484,25 @@ button {
     top: 0;
     left: 0;
     text-indent: 0;
+}
+
+.header-meu-filme {
+
+    background: url(../images/cabecalho_background.png) round transparent;
+    height: 150px;
+}
+
+.footer-meu-filme {
+
+    background: url(../images/rodape_background.png) space transparent;
+    height: 130px;
+}
+
+.card-meu-filme {
+    
+    border-radius: 5px;
+    background-color: #eeeeee
+    
 }
 
 
