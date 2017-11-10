@@ -10,9 +10,9 @@ class MovieForm extends Component{
     render() {
 
         return(
-            <div  >
+            <div >
                 <h4 className="fnt-roboto-i-c">Cadastro de filmes</h4> 
-                <form  onSubmit={this._handleSubmit.bind(this)}>
+                <form className="cadastro" onSubmit={this._handleSubmit.bind(this)}>
                     
                     <div  >
                         <input placeholder="Url imagem" ref={input => this._urlImage = input}/><br/>                        
@@ -27,3 +27,13 @@ class MovieForm extends Component{
 }
 
 export default MovieForm;
+
+class ExibicaoForm extends Component{
+       constructor() {
+
+        super();
+        this.state = {
+            exibirFormulario: false
+        }
+    }
+}
