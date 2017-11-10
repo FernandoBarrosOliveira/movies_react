@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Movie from './Movie';
-import $ from 'jquery';
+import jQuery from 'jquery';
 
 class MovieList extends Component {
 /*
@@ -35,12 +35,12 @@ class MovieList extends Component {
 
     componentWillMount(){
         console.log("montando");
-        $.ajax({
+        jQuery.ajax({
             url:"https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=4895a1e4cec2aeb113fc7178193f3920",
-            dataType: 'json',
+            dataType: 'jsonp',
             success:function(resposta){
                 console.log(resposta);
-                this.setState = ({movies:resposta.results})                
+                this.setState({movies: this.state.movies.concat(resposta.results)});               
             }.bind(this)
         })
 

@@ -393,6 +393,7 @@ img, iframe{
     height: auto;
     margin: 5px auto;
     max-width: 100%;
+    alt:url(../images/card_alt.png);
 }
 
 h1 {

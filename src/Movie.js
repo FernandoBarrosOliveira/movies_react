@@ -6,7 +6,7 @@ class Movie extends Component {
 
         return(
             <section className="card-meu-filme grid">
-                <img src={this.props.imagem} alt="./images/card_alt.png"/>
+                <img src={this.props.imagem} alt={this.props.titulo}/>
                 <div>
                     <h6 className="fnt-roboto-n-c">{this.props.titulo}</h6>
                 </div>
