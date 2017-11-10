@@ -591,3 +591,13 @@ button {
         display: none;
     }
 }
+
+.container{
+    float: left;
+}
+
+.formulario {
+    position: relative;
+    float: left;
+    left: 50%;
+}
