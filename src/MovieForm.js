@@ -10,15 +10,15 @@ class MovieForm extends Component{
     render() {
 
         return(
-            <div class="row">
+            <div >
                 <h4 className="fnt-roboto-i-c">Cadastro de filmes</h4> 
-                <form className="col s12" onSubmit={this._handleSubmit.bind(this)}>
+                <form  onSubmit={this._handleSubmit.bind(this)}>
                     
-                    <div className="input-field col s12" >
+                    <div  >
                         <input placeholder="Url imagem" ref={input => this._urlImage = input}/><br/>                        
                         <input placeholder="Titulo" ref={input => this._titulo = input}/><br/>                        
                         <textarea placeholder="Sinopse" className="materialize-textarea" ref={textarea => this._sinopse = textarea}></textarea>
-                        <button className="btn waves-effect waves-light" type="submit">Enviar</button>
+                        <button  type="submit">Enviar</button>
                     </div>
                 </form>
             </div>
