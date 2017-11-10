@@ -603,3 +603,17 @@ button {
     margin-top:-50px;
     margin-left:-50px;
 }
+
+input, textarea {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid ;
+    border-radius: 4px;
+}
+button.cadastro{
+    width: 100%;
+    text-align: center;
+    font-size: 1em;
+}
