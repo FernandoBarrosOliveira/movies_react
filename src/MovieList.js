@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import Movie from './Movie';
+import $ from 'jquery';
 
 class MovieList extends Component {
-
+/*
     constructor() {
 
         super();
@@ -25,7 +26,25 @@ class MovieList extends Component {
                 id: 5}  
             ]
         }
+    } */
+
+    constructor () {
+        super();
+        this.state = {movies:[]}
     }
+
+    componentWillMount(){
+        console.log("montando");
+        $.ajax({
+            url:"https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=4895a1e4cec2aeb113fc7178193f3920",
+            dataType: 'json',
+            success:function(resposta){
+                console.log(resposta);
+                this.setState = ({movies:resposta.results})                
+            }.bind(this)
+        })
+
+    };    
 
     render() {
 
@@ -43,8 +62,8 @@ class MovieList extends Component {
     _getMovies() {
         return this.state.movies.map(movie=>
         <Movie 
-            titulo={movie.titulo}
-            imagem={movie.imagem}
+            titulo={movie.title}
+            imagem={"https://image.tmdb.org/t/p/w370_and_h556_bestv2/" +movie.poster_path}
             key={movie.id}/>)
     }
 
