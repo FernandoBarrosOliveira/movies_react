@@ -42,8 +42,9 @@ class MovieList extends Component {
     _getMovies() {
         return this.state.movies.map(movie=>
         <Movie 
+            movie={movie}
             titulo={movie.title}
-            imagem={movie.url_imagem||("https://image.tmdb.org/t/p/w370_and_h556_bestv2/" +movie.poster_path)}
+            imagem={movie.url_imagem || ("https://image.tmdb.org/t/p/w370_and_h556_bestv2/" + movie.poster_path)}
             key={movie.id}/>)
     }
 

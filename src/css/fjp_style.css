@@ -392,8 +392,14 @@ body{
 img, iframe{
     height: auto;
     margin: 5px auto;
-    max-width: 100%;
+    width: 100%;
     alt:url(../images/card_alt.png);
+}
+
+img.card{
+
+    max-width: 60%;
+    margin-left: 20%;
 }
 
 h1 {
@@ -502,8 +508,48 @@ button {
 .card-meu-filme {
     
     border-radius: 5px;
-    background-color: #eeeeee
+    background-color: #eeeeee;
+    margin: 0.2%;    
+}
+.card-title{
+    font-size: 1em;
+    font-weight: bold;
+    text-align: left;
+    margin: 2px auto auto 2px;
+    float: initial; 
+    background-color: #f8f8f8;
+}
+.card-div-date{
+
+    background: url(../images/calendar.png) no-repeat transparent;
+    text-align: center;    
+    float: left;
+    font-style: italic;
+    color: #666666;
+    width: 40%;
+    height: 35px;
+    margin: 2% 0 2% 0;
+    padding: 2%;
+}
+
+.card-div-rate{
     
+    background: url(../images/rate.png) no-repeat transparent;
+    background-position: right;
+    text-align: center;
+    float: right;
+    font-style: italic;
+    color: #666666;
+    width: 40%;
+    height: 35px;
+    margin: 2% 0 2% 0;
+    padding: 2%;
+    
+}
+
+.w-border {
+    border: 2px solid red;
+
 }
 
 
@@ -514,7 +560,11 @@ button {
     section.grid {
         width: 24.5%;
         float: left;
-    }  
+    } 
+    section.card {
+        width: 49%;
+        float: left;
+    }
 
     nav ul li {        
         width: 49.50%;        
@@ -534,6 +584,17 @@ button {
         float: left;
     }
 
+    section.card {
+        width: 24.5%;
+        float: left;
+    }
+    .card-div-rate{
+        text-align: left;
+    }
+    .card-div-date{
+        text-align: right;
+    }
+
     section.media{
         height: auto;
         width: 49.5%;
@@ -542,7 +603,15 @@ button {
 
     nav ul li {        
         width: 24.5%; 
-    }       
+    }  
+
+    .formulario{
+
+       width: 49.5%;
+       margin-right: 25%;
+
+
+    }     
 
 }
 
@@ -599,7 +668,23 @@ button {
 .formulario {
     position: relative;
     float: left;
-    left: 50%;
-    margin-top:-50px;
-    margin-left:-50px;
+    width: 100%;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid ;
+    border-radius: 4px;
+}
+button.cadastro{
+    width: 100%;
+    text-align: center;
+    font-size: 1em;
+}
+
+cadastro{
+    width: 100%; 
 }
