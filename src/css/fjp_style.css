@@ -377,6 +377,7 @@ section {
 section.card{
     height: auto;
     margin: 1% 0.3%;
+    float:left;
 }
 
 section.media{
