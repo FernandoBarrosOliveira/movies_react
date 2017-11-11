@@ -7,7 +7,7 @@ class Movie extends Component {
         let dateRelease = "????";
         let voteAverage = "?";
         let titulo = this.props.titulo;
-        
+        let textoBotao = "Mais informações";
         if (this.props.movie.release_date) {
          
             dateRelease = this.props.movie.release_date.split("-")[0];
@@ -26,14 +26,23 @@ class Movie extends Component {
         return(
             <section className="card-meu-filme card">
                 
-                <img className="card" src={this.props.imagem} alt={this.props.titulo} title={this.props.titulo}/>
-                
-                <div className="card">
-                    <p className="fnt-roboto card-title">{titulo}</p>
+                    <div>
+                        <img className="card" src={this.props.imagem} alt={this.props.titulo} title={this.props.titulo}/>          
+                    </div>
+                    <div className="fnt-roboto card-title">{titulo}</div>
                     <div className="card-div-date">{dateRelease}</div>
                     <div className="card-div-rate"> {voteAverage}</div>
-                </div>
+                    <div className="card-action">
+                        <a className="fnt-roboto-n-c" href="#"
+                            onClick={this._handleClick.bind(this)}>{textoBotao}</a>
+                    </div>
+                
             </section>); 
+    }
+
+    _handleClick(event) {
+
+        this.props.visualizarDetalhes(this.props.movie);    
     }
 
 }

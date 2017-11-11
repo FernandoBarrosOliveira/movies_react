@@ -374,6 +374,10 @@ section {
     margin: 0.25%;
     
 }
+section.card{
+    height: auto;
+    margin: 1% 0.3%;
+}
 
 section.media{
     height: auto;
@@ -505,11 +509,60 @@ button {
     height: 130px;
 }
 
+.detail-movie{
+
+    background-color: #666666;
+    width: 100%;
+    max-width: 1080px;
+    height: auto;  
+    min-height: 360px;  
+    
+}
+.detail-image{       
+    max-width: 30%;
+    height: auto;     
+    margin-left: 2%;
+    float: left;
+    max-height: 330px;
+    
+}
+.detail-title{
+    font-size: 1.75em;
+    font-weight: bold;
+    text-align: left;
+    margin-left: 0.5%;    
+    color: #f8f8f8;
+    
+}
+.detail-overview{
+    font-size: 1em;
+    font-style: italic;
+    text-align: left;
+    margin-left: 0.5%;    
+    color: #f8f8f8;
+}
+.detail-info {
+    
+    width: 50%;
+    margin-left: 35%;
+    margin-top: 0; 
+    
+     
+}
+
+.detail-action {
+
+    font-size: 0.75em;
+    color: #aaaaaa;
+    
+
+}
+
 .card-meu-filme {
     
     border-radius: 5px;
     background-color: #eeeeee;
-    margin: 0.2%;    
+    margin: 0.2%;     
 }
 .card-title{
     font-size: 1em;
@@ -536,6 +589,7 @@ button {
     
     background: url(../images/rate.png) no-repeat transparent;
     background-position: right;
+    background-position-y: 0px;
     text-align: center;
     float: right;
     font-style: italic;
@@ -543,8 +597,14 @@ button {
     width: 40%;
     height: 35px;
     margin: 2% 0 2% 0;
-    padding: 2%;
-    
+    padding: 2%;    
+}
+
+.card-action{
+
+    font-size: 0.75em;
+    color: #aaaaaa;
+    float: right;
 }
 
 .w-border {
@@ -585,7 +645,7 @@ button {
     }
 
     section.card {
-        width: 24.5%;
+        width: 24%;
         float: left;
     }
     .card-div-rate{

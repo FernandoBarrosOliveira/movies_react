@@ -45,12 +45,13 @@ class MovieList extends Component {
             movie={movie}
             titulo={movie.title}
             imagem={movie.url_imagem || ("https://image.tmdb.org/t/p/w370_and_h556_bestv2/" + movie.poster_path)}
-            key={movie.id}/>)
+            key={movie.id}
+            visualizarDetalhes={this._visualizarDetalhes.bind(this)}/>);
     }
-
+       
     _adicionarMovie(urlImage, titulo, sinopse, dataLancamento, voto) {   
     
-        let novaEstoria = [{id: this.state.movies.length + 1,
+        let newMovie = [{id: this.state.movies.length + 1,
                             title: titulo,
                             overview: sinopse,
                             url_imagem: urlImage,
@@ -58,9 +59,13 @@ class MovieList extends Component {
                             vote_average:voto
 
                         }]
-        this.setState({movies: this.state.movies.concat(novaEstoria)});
+        this.setState({movies: this.state.movies.concat(newMovie)});
+    }  
+    
+    _visualizarDetalhes(movie) {
 
-    }   
+        this.props.visualizarDetalhesApp(movie);
+    }
         
 
 }
