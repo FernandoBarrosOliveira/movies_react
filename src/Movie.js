@@ -7,8 +7,9 @@ class Movie extends Component {
         let dateRelease = "????";
         let voteAverage = "?";
         let titulo = this.props.titulo;
+        
         if (this.props.movie.release_date) {
-
+         
             dateRelease = this.props.movie.release_date.split("-")[0];
         }
 

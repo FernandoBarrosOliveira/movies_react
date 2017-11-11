@@ -48,13 +48,18 @@ class MovieList extends Component {
             key={movie.id}/>)
     }
 
-    _adicionarMovie(urlImage, titulo, sinopse) {        
+    _adicionarMovie(urlImage, titulo, sinopse, dataLancamento, voto) {   
+    
         let novaEstoria = [{id: this.state.movies.length + 1,
                             title: titulo,
                             overview: sinopse,
-                            url_imagem: urlImage
+                            url_imagem: urlImage,
+                            release_date: dataLancamento,
+                            vote_average:voto
+
                         }]
         this.setState({movies: this.state.movies.concat(novaEstoria)});
+
     }   
         
 
