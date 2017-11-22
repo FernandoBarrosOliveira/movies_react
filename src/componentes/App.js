@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './css/fjp_style.css';
-import Cabecalho from './Cabecalho';
+import Cabecalho from './comuns/Cabecalho';
 import MovieDetails from './MovieDetails';
 import MovieList from './MovieList';
-import Rodape from './Rodape';
+import Rodape from './comuns/Rodape';
+import Menus from './comuns/Menu';
 
 import './App.css';
 
@@ -24,7 +23,8 @@ class App extends Component {
 
             <div>        
                  
-                <Cabecalho/>
+                <Cabecalho/> 
+               
                 <MovieDetails
                     movie={this.state.movieAtual}
                     exibirDetalhe={this.state.exibirDetalhe}
