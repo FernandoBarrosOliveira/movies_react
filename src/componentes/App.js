@@ -1,37 +1,30 @@
 import React, { Component } from 'react';
 import Cabecalho from './comuns/Cabecalho';
-import MovieDetails from './MovieDetails';
-import MovieList from './MovieList';
 import Rodape from './comuns/Rodape';
 import Menus from './comuns/Menu';
+import MoviePage from './moviepage/MoviePage';
+import Home from './home/Home';
 
 import './App.css';
+import { Switch, Route } from 'react-router-dom';
 
 
 
 class App extends Component {
 
-    constructor() {
-        super();
 
-        this.state = {exibirDetalhe: false,
-                      movieAtual: null};
-    }
 
   render() {
         return (
 
             <div>        
-                 
                 <Cabecalho/> 
-               
-                <MovieDetails
-                    movie={this.state.movieAtual}
-                    exibirDetalhe={this.state.exibirDetalhe}
-                    naoVisualizarDetalhes={this._naoVisualizarDetalhes.bind(this)}/>
-                
-                <MovieList
-                    visualizarDetalhesApp={this._visualizarDetalhesApp.bind(this)}/>
+                <Switch>
+                    <Route exact path='/' component={Home}/>
+                    <Route path='/moviepage' component={MoviePage}/>
+                    <Route path='/cadastro' component={MoviePage}/>
+                    <Route path='/sobre' component={MoviePage}/>
+                </Switch>
                 <Rodape/>
             </div>
         );

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './css/fjp_style.css';
+
 
 class Home extends Component {
     
@@ -13,4 +12,4 @@ class Home extends Component {
         }
     }
 
-export default Top20;
+export default Home;

@@ -12,7 +12,7 @@ class Menu extends Component {
                     <button className="menu-fechar"></button>
                     <ul className = "menu-principal">
                         <li className="col-gra-00"><Link className="col-gra-00" to="/">Home</Link></li>
-                        <li className="col-gra-00"><Link className="col-gra-00" to="/top20">Top 20</Link></li>
+                        <li className="col-gra-00"><Link className="col-gra-00" to="/moviepage">Top 20</Link></li>
                         <li className="col-gra-00"><Link className="col-gra-00" to="/cadastro">Cadastro</Link></li>
                         <li className="col-gra-00"><Link className="col-gra-00" to="/sobre">Sobre</Link></li>
                     </ul>
