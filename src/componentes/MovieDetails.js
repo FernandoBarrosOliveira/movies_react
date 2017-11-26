@@ -4,14 +4,14 @@ class MovieDetails extends Component {
 
     constructor() {
         super();
-        this.state = {exibirDetalhe: false}
+        this.state = {}
     }
 
     render() {
 
         let movieDetail = <div/>;
 
-        //this.setState({exibirDetalhe: this.props.exibirDetalhe});
+
 
         if (this.props.exibirDetalhe) {
 

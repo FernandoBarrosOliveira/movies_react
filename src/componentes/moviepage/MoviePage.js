@@ -6,21 +6,25 @@ class MoviePage extends Component{
 
   constructor() {
     super();
-
     this.state = {exibirDetalhe: false,
-                  movieAtual: null};  
+                  movieAtual: null,
+                  exibiListaApi:true}  
   }
 
   render(){
+    
     return (
+
       <div>
+        <h4 className="fnt-roboto-i-c">Top 20</h4> ;
         <MovieDetails
-                      movie={this.state.movieAtual}
-                      exibirDetalhe={this.state.exibirDetalhe}
-                      naoVisualizarDetalhes={this._naoVisualizarDetalhes.bind(this)}/>
+          movie={this.state.movieAtual}
+          exibirDetalhe={this.state.exibirDetalhe}
+          naoVisualizarDetalhes={this._naoVisualizarDetalhes.bind(this)}/>
                   
-                  <MovieList
-                      visualizarDetalhesApp={this._visualizarDetalhesApp.bind(this)}/>
+        <MovieList
+            visualizarDetalhesApp={this._visualizarDetalhesApp.bind(this)}
+            exibiListaApi={this.state.exibiListaApi}/>
       </div>
     );
 
@@ -39,6 +43,9 @@ class MoviePage extends Component{
           movieAtual: movie
       });
   }
+
+  
+
 
 
 }

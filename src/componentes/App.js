@@ -32,19 +32,7 @@ class App extends Component {
         );
     }
 
-    _naoVisualizarDetalhes() {
 
-        this.setState({
-            exibirDetalhe: false});
-    }
-
-    _visualizarDetalhesApp(movie) {
-    
-        this.setState({
-            exibirDetalhe: true,
-            movieAtual: movie
-        });
-    }
 }
 
 export default App;

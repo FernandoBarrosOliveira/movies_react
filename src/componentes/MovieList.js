@@ -9,31 +9,28 @@ class MovieList extends Component {
         this.state = {movies:[]}
     }
 
-    componentWillMount(){
-        console.log("montando");
-        $.ajax({
-            url:"https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=4895a1e4cec2aeb113fc7178193f3920",
-            dataType: 'json',
-            success:function(resposta){
-                console.log(resposta);
-                this.setState({movies: this.state.movies.concat(resposta.results)});               
-            }.bind(this)
-        })
+    componentWillMount(){    
+        if (this.props.exibiListaApi){
+            $.ajax({
+                url:"https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=4895a1e4cec2aeb113fc7178193f3920",
+                dataType: 'json',
+                success:function(resposta){
+                    
+                    this.setState({movies: this.state.movies.concat(resposta.results)});               
+                }.bind(this)
+            })
+        }
+        
 
     };    
 
     render() {
-
         const movies = this._getMovies();
-
         return(
-            <div >
-                <h4 className="fnt-roboto-i-c">Top 20</h4> 
+            <div>                                
                 <div className ="container">
                     {movies}
                 </div>  
-                
-
             </div>); 
     }
 
