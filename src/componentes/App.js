@@ -3,6 +3,7 @@ import Cabecalho from './comuns/Cabecalho';
 import Rodape from './comuns/Rodape';
 import Menus from './comuns/Menu';
 import MoviePage from './moviepage/MoviePage';
+import CadastroMovie from './cadastro/CadastroMovie';
 import Home from './home/Home';
 
 import './App.css';
@@ -22,7 +23,7 @@ class App extends Component {
                 <Switch>
                     <Route exact path='/' component={Home}/>
                     <Route path='/moviepage' component={MoviePage}/>
-                    <Route path='/cadastro' component={MoviePage}/>
+                    <Route path='/cadastro' component={CadastroMovie}/>
                     <Route path='/sobre' component={MoviePage}/>
                 </Switch>
                 <Rodape/>
