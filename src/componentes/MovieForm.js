@@ -2,19 +2,18 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import * as movieActions from '../actions/cadastroMovieActions'
 import {bindActionCreators} from 'redux';
+import $ from 'jquery';
 
 class MovieForm extends Component{
 
     _handleSubmit(event) {
         event.preventDefault();
-        // this.props.adicionarMovie(this._urlImage.value, this._titulo.value, this._sinopse.value,
-        //   this._dataLancamento.value, this._voto.value);
-        this.props.actions.createMovie(
-        {title: this._titulo.value,
-        overview: this._sinopse.value,
-        url_imagem: this._urlImage.value,
-        release_date: this._dataLancamento.value,
-        vote_average:this._voto.value});
+
+        this.props.actions.createMovie({title: this._titulo.value,
+                                        overview: this._sinopse.value,
+                                        url_imagem: this._urlImage.value,
+                                        release_date: this._dataLancamento.value,
+                                        vote_average:this._voto.value});
     }
 
     render() {
