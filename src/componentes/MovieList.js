@@ -1,26 +1,29 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import Movie from './Movie';
-import MovieForm from './MovieForm';
+import * as movieActions from '../actions/cadastroMovieActions'
+import {bindActionCreators} from 'redux';
 import $ from 'jquery';
 
 class MovieList extends Component {
-    constructor () {
+/*     constructor () {
         super();
-        this.state = {movies:[]}
-    }
+       // this.state = {movies:[]}
+    } */
 
     componentWillMount(){    
         if (this.props.exibiListaApi){
-            $.ajax({
+            /* $.ajax({
                 url:"https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=4895a1e4cec2aeb113fc7178193f3920",
                 dataType: 'json',
                 success:function(resposta){
                     
                     this.setState({movies: this.state.movies.concat(resposta.results)});               
                 }.bind(this)
-            })
+            }) */
+            //this.dispatch(loadTop20Movies());
         }
-        
+        this.props.actions.loadTop20Movies();
 
     };    
 
@@ -35,7 +38,9 @@ class MovieList extends Component {
     }
 
     _getMovies() {
-        return this.state.movies.map(movie=>
+
+        // return this.props.movies.length;
+        return this.props.movies.map(movie=>
         <Movie 
             movie={movie}
             titulo={movie.title}
@@ -49,8 +54,19 @@ class MovieList extends Component {
 
         this.props.visualizarDetalhesApp(movie);
     }
-        
-
 }
 
-export default MovieList;
+function mapStateToProps(state, ownProps) {
+    return {
+        movies: state.movies
+    };
+}
+
+function mapDispatchToProps(dispatch) {
+
+    return {
+        actions: bindActionCreators(movieActions, dispatch)
+    };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(MovieList);

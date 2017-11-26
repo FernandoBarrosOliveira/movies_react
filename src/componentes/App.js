@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Cabecalho from './comuns/Cabecalho';
 import Rodape from './comuns/Rodape';
-import Menus from './comuns/Menu';
 import MoviePage from './moviepage/MoviePage';
 import CadastroMovie from './cadastro/CadastroMovie';
 import SobrePage from './sobre/SobrePage';

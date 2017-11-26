@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import MovieForm from '../MovieForm';
-import MoviePage from '../moviepage/MoviePage';
 import MovieDetails from '../MovieDetails';
 import MovieList from '../MovieList';
 

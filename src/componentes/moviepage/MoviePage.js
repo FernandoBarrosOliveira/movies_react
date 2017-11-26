@@ -16,7 +16,7 @@ class MoviePage extends Component{
     return (
 
       <div>
-        <h4 className="fnt-roboto-i-c">Top 20</h4> ;
+        <h4 className="fnt-roboto-i-c">Top 20</h4>
         <MovieDetails
           movie={this.state.movieAtual}
           exibirDetalhe={this.state.exibirDetalhe}
@@ -43,11 +43,6 @@ class MoviePage extends Component{
           movieAtual: movie
       });
   }
-
-  
-
-
-
 }
 
 export default MoviePage;
