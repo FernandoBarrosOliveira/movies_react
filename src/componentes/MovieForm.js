@@ -14,6 +14,7 @@ class MovieForm extends Component{
                                         url_imagem: this._urlImage.value,
                                         release_date: this._dataLancamento.value,
                                         vote_average:this._voto.value});
+        alert('Filme cadastrado com sucesso');
     }
 
     render() {
