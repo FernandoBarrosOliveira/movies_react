@@ -32,9 +32,7 @@ class MovieList extends Component {
                 <div className ="container">
                     {movies}
                 </div>  
-                <div className="formulario">
-                    <MovieForm adicionarMovie={this._adicionarMovie.bind(this)}/>
-                </div>
+                
 
             </div>); 
     }
@@ -48,19 +46,7 @@ class MovieList extends Component {
             key={movie.id}
             visualizarDetalhes={this._visualizarDetalhes.bind(this)}/>);
     }
-       
-    _adicionarMovie(urlImage, titulo, sinopse, dataLancamento, voto) {   
-    
-        let newMovie = [{id: this.state.movies.length + 1,
-                            title: titulo,
-                            overview: sinopse,
-                            url_imagem: urlImage,
-                            release_date: dataLancamento,
-                            vote_average:voto
 
-                        }]
-        this.setState({movies: this.state.movies.concat(newMovie)});
-    }  
     
     _visualizarDetalhes(movie) {
 
